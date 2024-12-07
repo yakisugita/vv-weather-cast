@@ -1,0 +1,11 @@
+module.exports = {
+  apps : [{
+    name   : "weather-cast",
+    script : "./weather-cast.js",
+    watch: ["weather-cast.js", "weather-cast.config.js", ".env"],
+    autorestart: false,
+    log_date_format: "YYYY-MM-DD HH:mm Z",
+    cron_restart: "0 7 * * *",
+    interpreter_args: "--env-file=.env"
+  }]
+}
